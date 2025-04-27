@@ -1,0 +1,13 @@
+User->Story:
+- #SPEAKWITH: <speaker_name> -> Respond with startprompt
+- #CONTEXT <speaker_name>: <last_interaction> -> last interaction from speaker for story context
+
+User->Speaker:
+- #SAY: <content> -> say something to speaker-llm
+
+Story-LLM:
+- #STARTPROPMPT: <speaker_startprompt> -> startpropmt for speaker LLM
+- #NOTHING -> when there is nothing to say (#CONTEXT)
+
+Speaker-LLM:
+- #SPEAK: <content> -> text that gets generated to speech
