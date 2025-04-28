@@ -1,15 +1,29 @@
-User->Story:
+### SYSTHEM->Story:
 - #SPEAKWITH: <speaker_name> -> Respond with startprompt
 - #CONTEXT <speaker_name>: <last_interaction> -> last interaction from speaker for story context
 
+### SYSTHEM->Speaker:
+- #USERSAY{...}: user says something to speaker-llm
+- #STAYQUITE: user says nothing
+- #INFO{...}: Official factual basis, established narrative events, location information, timeline progression, or mandatory instructions.
+These are objective reality data that you must adhere to ABSOLUTELY. You are not permitted to ignore, reinterpret, or alter them in any way.
+- #INTERRUPTED{whatWasSaid!whatWasNotSaid}: if the user interrupts the llm
 User->Speaker:
-- #SAY: <content> -> say something to speaker-llm
 - #SUMUP -> speaker llm should sum up the conversation for the story llm
 
-Story-LLM:
+### Story-LLM:
 - #STARTPROPMPT: <speaker_startprompt> -> startpropmt for speaker LLM
 - #NOTHING: -> when there is nothing to say (#CONTEXT)
 
-Speaker-LLM:
-- #SPEAK: <content> -> text that gets generated to speech
-- #SUM: <content> -> sum up of conversation
+- PRESIDENT: if the police-president no longer trusts the user. player lost. (if the player is not serious)
+- COLLEAGUE{...}: if the player starts to not be serious or needs a hint a colleague can help or warn him (colleague has no name and the player cant ask back)
+
+- KILL(amount): if hostages are killed by the hostagetaker
+- FREE(amount): if hostages are released by the hostage taker
+
+### Speaker-LLM:
+- #SPEAK(character) text that gets generated to speech
+
+- #PROPOSEEND: if the speaker has no more to say
+- #FORCEEND: if the speaker ends the conversation
+- #SUMMARY: <content> -> sum up of conversation
