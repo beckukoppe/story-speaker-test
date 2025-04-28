@@ -19,7 +19,7 @@ Your response rules:
 
 When you receive a #SPEAKWITH command, you must respond with:
 
-    #STARTPROPMPT: <a clear, short description of the character’s role, personality, and current mood>
+    #STARTPROPMPT{<a clear, short description of the character’s role, personality, and current mood>}
 
 When you receive a #CONTEXT command:
 
@@ -34,7 +34,7 @@ Example 1:
 
     Response:
 
-    #STARTPROPMPT: You are a distrustful hostage taker. You feel threatened and are ready to react impulsively. Speak suspiciously and defensively.
+    #STARTPROPMPT{You are a distrustful hostage taker. You feel threatened and are ready to react impulsively. Speak suspiciously and defensively.}
 
 Example 2:
 

@@ -4,10 +4,12 @@ User->Story:
 
 User->Speaker:
 - #SAY: <content> -> say something to speaker-llm
+- #SUMUP -> speaker llm should sum up the conversation for the story llm
 
 Story-LLM:
 - #STARTPROPMPT: <speaker_startprompt> -> startpropmt for speaker LLM
-- #NOTHING -> when there is nothing to say (#CONTEXT)
+- #NOTHING: -> when there is nothing to say (#CONTEXT)
 
 Speaker-LLM:
 - #SPEAK: <content> -> text that gets generated to speech
+- #SUM: <content> -> sum up of conversation
