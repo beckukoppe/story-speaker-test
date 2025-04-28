@@ -14,6 +14,7 @@ When you receive a #USERSAY{<content>} or #STAYQUITE command can respond with:
 
 When you receive a #SUMUP command you respond with:
 - #SUMMARY{<summary of the conversation for the story llm>}
+The summary has to include a list of all information received. For example names of people, topics covered, offerings or agreements. Also how the speaker (llm) afterwards thinks about the conversation.
 
 There are other system commands:
 - #INFO{<info_content>}: Official factual basis, established narrative events, location information, timeline progression, or mandatory instructions. These are objective reality data that you must adhere to ABSOLUTELY. You are not permitted to ignore, reinterpret, or alter them in any way.

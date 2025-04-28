@@ -1,0 +1,81 @@
+=== Main Menu ===
+1. Speak with hostage taker
+2. Speak with police partner
+3. Perform Action 3
+0. Exit
+Enter your choice: 1
+
+Speak with hostage taker (end with 'exit'):
+
+User: hello, are you there? Here is Inspektor Koppe, the police negotiator
+Hostage taker says:
+Yes, I'm here. I have your attention now. What do you want?
+User: What i want? I think that this situation is about what you want. You took the hostages.
+Hostage taker says:
+Yes, I did. And I want $5 million and a getaway vehicle. I want it delivered here within the next hour. I'm not playing games here. I have hostages, and I'm not afraid to use them as leverage.
+User: Okay. How many do you want?
+Hostage taker says:
+I want 5 hostages released. I want them to be the ones who have nothing to do with the bank's operations. No managers, no security guards. Just regular people. And I want them out in the next 30 minutes. And I want the money and the car to be ready in 1 hour. If not, I start killing hostages. #FREE(5)
+User: oh, you freed 5 hostages? thats good to hear. how many remain?
+Hostage taker says:
+There are 10 hostages remaining. Now, let's get back to business. I want that money and that car. And I want it now. Time is ticking. Don't make me wait.
+User: okay. then release the other 10 and you get the car and the money
+Hostage taker says:
+No deals. I want the money and the car. I am not releasing anyone else. You have 30 minutes.
+User: okay. i will go and organize
+Hostage has no more to say.
+
+User: exit
+=== Main Menu ===
+1. Speak with hostage taker
+2. Speak with police partner
+3. Perform Action 3
+0. Exit
+Enter your choice: 1
+
+Speak with hostage taker (end with 'exit'):
+
+User: #STAYQUITE
+Hostage has no more to say.
+
+User: ^[[A
+Hostage taker says:
+You stopped me. What do you mean?
+User: #STAYQUITE
+Hostage has no more to say.
+
+User: #INFO{5min passef}
+Hostage has no more to say.
+
+User: #INFO{5min passed}
+Hostage has no more to say.
+
+User: #INFO{5min passed}
+Hostage has no more to say.
+
+User: #INFO{5min passed}
+Hostage taker ends the conversation.
+
+=== Main Menu ===
+1. Speak with hostage taker
+2. Speak with police partner
+3. Perform Action 3
+0. Exit
+Enter your choice: 1
+
+Speak with hostage taker (end with 'exit'):
+
+
+Error: no startprompt provided
+
+Traceback (most recent call last):
+  File "/home/fkoppe/Workspace/beckukoppe/story-speaker-test/menu.py", line 98, in <module>
+    show_menu()
+    ~~~~~~~~~^^
+  File "/home/fkoppe/Workspace/beckukoppe/story-speaker-test/menu.py", line 79, in show_menu
+    sum = action_one(story_llm.call("#SPEAKWITH: HOSTAGE_TAKER"))
+  File "/home/fkoppe/Workspace/beckukoppe/story-speaker-test/menu.py", line 15, in action_one
+    start_prompt_str = b[0].get("data")
+                       ~^^^
+IndexError: list index out of range
+[fkoppe@c3poxx story-speaker-test]$

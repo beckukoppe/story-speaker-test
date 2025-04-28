@@ -26,7 +26,10 @@ def action_one(start_prompt):
         if(user_input == "exit"):
             break
 
-        response = hostage_taker.call("#USERSAY{"+user_input+"}")
+        if(user_input.startswith("#")):
+            response = hostage_taker.call(user_input)
+        else:
+            response = hostage_taker.call("#USERSAY{"+user_input+"}")
         
         boolean, cmds = response
 
@@ -36,7 +39,7 @@ def action_one(start_prompt):
         end = False
         for cmd in cmds:
             if(cmd.get("command") == "SPEAK"):
-                print("Hostage taker says:\n")
+                print("Hostage taker says:\t")
                 print(cmd.get("data"))
 
             if(cmd.get("command") == "FORCEEND"):

@@ -13,7 +13,7 @@ class LLM:
         self._user(message)
         response = self._send(self._messages)
         self._system(response)
-        print(response)
+        #print(response)
         return parseCommand(response, self._allowed_commands)
 
     def getSumUp(self):
