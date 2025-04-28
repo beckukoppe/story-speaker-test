@@ -16,6 +16,9 @@ These are objective reality data that you must adhere to ABSOLUTELY. You are not
 - PRESIDENT: if the police-president no longer trusts the user. player lost. (if the player is not serious)
 - COLLEAGUE{...}: if the player starts to not be serious or needs a hint a colleague can help or warn him (colleague has no name and the player cant ask back)
 
+- KILL(amount): if hostages are killed by the hostagetaker
+- FREE(amount): if hostages are released by the hostage taker
+
 ### Speaker-LLM:
 - #SPEAK(character) text that gets generated to speech
 
