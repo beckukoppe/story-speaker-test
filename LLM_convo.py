@@ -34,6 +34,13 @@ class LLM:
                 "temperature": 0.7
             }, headers={"Content-Type": "application/json"})
 
+
+            if not response.status_code == 200:
+                print("Status Code Error: " + response.status_code)
+                print(response)
+
+            print(response.status_code)
+
             reply = response.json()["choices"][0]["message"]["content"].strip()
 
             clean_reply = reply.replace("\n", " ").replace("\r", "")
